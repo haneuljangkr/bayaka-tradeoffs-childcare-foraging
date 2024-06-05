@@ -15,7 +15,7 @@ library(ggplot2)
 ####################################
 ### Posterior predictive plots #####
 ####################################
-d <- read.csv("C:/Users/amandine_visine/Documents/Project/foraging_trips_after_review.csv", sep=";") 
+
 # Load the model results
 load("duration_drop_interaction.RData")
 load("total_distance_drop_interaction.RData")
