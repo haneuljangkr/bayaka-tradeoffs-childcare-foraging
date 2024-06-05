@@ -2239,9 +2239,9 @@ figure_all = ggarrange(
 
 figure_all  
 
-ggsave("figure_all.jpeg", plot = figure_all, 
-       height = 20, width = 15, 
-       dpi = 1500)
+ggsave("Rplot08.jpeg", plot = figure_all, 
+       height = 15, width = 11.25, 
+       dpi = 1200)
 
 
 
