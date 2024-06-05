@@ -15,7 +15,7 @@ library(ggplot2)
 ####################################
 ### Posterior predictive plots #####
 ####################################
-
+d <- read.csv("C:/Users/amandine_visine/Documents/Project/foraging_trips_after_review.csv", sep=";") 
 # Load the model results
 load("duration_drop_interaction.RData")
 load("total_distance_drop_interaction.RData")
@@ -2228,7 +2228,7 @@ figure_all = ggarrange(
   label.y = 1,
   hjust = -0.5,
   vjust = 1.5,
-  font.label = list(size = 13, color = "black", face = "bold", family = NULL),
+  font.label = list(size = 8, color = "black", face = "plain", family = NULL),
   align = c("none", "h", "v", "hv"),
   widths = 1.2,
   heights = 1,
@@ -2237,4 +2237,12 @@ figure_all = ggarrange(
   legend.grob = NULL
 )
 
-figure_all                         
+figure_all  
+
+ggsave("figure_all.jpeg", plot = figure_all, 
+       height = 20, width = 15, 
+       dpi = 1500)
+
+
+
+
