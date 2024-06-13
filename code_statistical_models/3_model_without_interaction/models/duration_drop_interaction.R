@@ -22,13 +22,13 @@ d <- read.csv("data_tradeoffs_bayaka_mothers.csv", sep=",")
 nrow(d) 
 
 ## Check data
-length(unique(d$focalID)) # 23 focal women 
+length(unique(d$focalID)) # 22 focal women 
 length(unique(d$dayID))   # 38 observation days 
-length(unique(d$tripID))  # 523 foraging trips
-length(unique(d$tripID[d$infant_presence==FALSE])) # 216 foraging trips without focal woman's infant in group
-length(unique(d$tripID[d$infant_presence==TRUE]))  # 307 foraging trips with focal woman's infant in group
+length(unique(d$tripID))  # 503 foraging trips
+length(unique(d$tripID[d$infant_presence==FALSE])) # 199 foraging trips without focal woman's infant in group
+length(unique(d$tripID[d$infant_presence==TRUE]))  # 304 foraging trips with focal woman's infant in group
 table(d$locID, useNA="always") # 3 locations (forest/garden/both) 
-length(unique(d$groupID)) # 387 foraging groups
+length(unique(d$groupID)) # 381 foraging groups
 length(unique(d$food_items)) # 16 combinations of 7 unique items
 
 # make factors
@@ -58,7 +58,7 @@ d1 <- d %>%
 
 d1 <- d1 %>% 
   filter(!is.na(food_items)) 
-nrow(d1) # 359 trips
+nrow(d1) # 348 trips
 
 # Compute group average of each predictor
 d1$focalID = as.factor(d1$focalID)
